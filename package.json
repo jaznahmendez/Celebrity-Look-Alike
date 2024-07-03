@@ -1,0 +1,25 @@
+{
+  "name": "celebrity-look-alike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaznahmendez/Celebrity-Look-Alike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaznahmendez/Celebrity-Look-Alike/issues"
+  },
+  "homepage": "https://github.com/jaznahmendez/Celebrity-Look-Alike#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1653.0",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
