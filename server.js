@@ -41,8 +41,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
         Bucket: 'equipo-04-cloud',
         Key: file.originalname,
         Body: file.buffer,
-        ContentType: file.mimetype,
-        ACL: 'public-read' // Adjust permissions as needed
+        ContentType: file.mimetype
     };
 
     s3.upload(params, (err, data) => {
