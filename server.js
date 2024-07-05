@@ -36,7 +36,7 @@ app.get('/script.js', (req, res) => {
 app.post('/upload', upload.single('file'), (req, res) => {
     const file = req.file;
     const params = {
-        Bucket: 'equipo-04-cloud',
+        Bucket: 'comparations',
         Key: file.originalname,
         Body: file.buffer,
         ContentType: file.mimetype
