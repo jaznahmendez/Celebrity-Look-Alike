@@ -5,23 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Upload</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="curved-text">
+        <svg viewBox="0 0 580 150">
+            <path id="curve" d="M20,110 Q290,-10 550,110" fill="transparent"/>
+            <text width="500">
+                <textPath href="#curve">
+                    Your Celebrity Look-Alike
+                </textPath>
+            </text>
+        </svg>
+    </div>
     <div class="col-md-6">
-        <div class = "row">
+        <div class="overlay" id="loadingOverlay">
+            <img src="./racoon-pedro.gif" alt="Loading...">
+        </div>
+        <div class="container load" id="results-div"></div>      
+        </div>
+        <div class="results" id="img-res">
+        </div>
+        <div class="row">
             <div class="container upload">
-                <h1>Upload a File</h1>
+                <h1>Upload a Photo</h1>
                 <form id="uploadForm">
                     <div class="file-input">
                         <input type="file" id="file" name="file">
-                        <label for="file">Choose File</label>
+                        <label for="file">Choose Photo</label>
                     </div>
-                    <button type="submit">Upload</button>
+                    <button type="submit">Get Results!!</button>
                 </form>
-            </div>
-                <div class = "container load">
-            </div>
-            <div class="results">
             </div>
         </div>
     </div>

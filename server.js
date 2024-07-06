@@ -88,7 +88,7 @@ const getLastUploadedObject = () => {
                     } else {
                         const image = data.Body.toString('base64');
                         lastUploadedObject.image_compared = image;
-                        console.log('Image:', image);
+                        //console.log('Image:', image);
                     }
                 });
 
@@ -103,8 +103,8 @@ const getLastUploadedObject = () => {
                     } else {
                         const image = data.Body.toString('base64');
                         lastUploadedObject.image_matched = image;
-                        console.log('\n\n\n\n');
-                        console.log('Image:', image);
+                        //console.log('\n\n\n\n');
+                        //console.log('Image:', image);
                     }
                 });
 

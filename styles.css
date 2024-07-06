@@ -1,18 +1,44 @@
 body {
-        /* Fallback para navegadores que no soportan degradados */
-        background-color: #e75480; /* Rosa */
-        background-image: linear-gradient(to bottom, #e75480, #8e44ad); /* Degradado de rosa a morado */
-        
-        /* Estilos adicionales para el cuerpo del documento */
-        margin: 0; /* Elimina el margen predeterminado del cuerpo */
-        padding: 0; /* Elimina el relleno predeterminado del cuerpo */
-        height: 100vh; /* Establece la altura del cuerpo al 100% del viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, sans-serif;
-
+    /* Fallback for browsers that do not support gradients */
+    background-color: #e75480; /* Pink */
+    background-image: linear-gradient(to bottom, #c56a85, #cd82ed); /* Gradient from pink to purple */
+    
+    /* Additional styles for the document body */
+    margin: 0; /* Remove the body's default margin */
+    padding: 0; /* Remove the body's default padding */
+    height: 100vh; /* Set the body's height to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
 }
+
+.curved-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+}
+
+svg {
+    width: 100%;
+    height: 335px;
+}
+
+text {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+    font-size: 50px;
+}
+
 .container {
     background-color: #fff;
     padding: 20px;
@@ -20,20 +46,100 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
 }
+
 .file-input {
     margin: 20px 0;
 }
+
 .file-input input[type="file"] {
     display: none;
 }
+
 .file-input label {
-    background-color: #007bff;
+    background-color: rgb(78, 38, 115);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
 }
+
 .file-input label:hover {
-    background-color: #0056b3;
+    background-color: #f1ed79;
+    color: black;
+}
+
+button {
+    background-color: rgb(210, 182, 236);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+}
+
+button:hover {
+    background-color: #f1ed79;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display: none; /* Hide by default */
+}
+
+.overlay img {
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+}
+
+.load{
+    display: none;
+}
+
+.load h1 {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+    font-size: 50px;
+}
+
+.load h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.img-res{
+    display: none;
+    width: 200px; /* Width of the cropped area */
+    height: 200px; /* Height of the cropped area */
+    overflow: hidden;
+    position: relative;
+}
+.results img{
+    width: auto; /* Maintain original aspect ratio */
+    height: 100%; /* Fit the height of the container */
+    object-fit: cover;
+    object-position: center; /* Center the image in the container */
+    position: absolute; /* Position the image absolutely inside the container */
 }
