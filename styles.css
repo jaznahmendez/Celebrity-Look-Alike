@@ -1,11 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+        /* Fallback para navegadores que no soportan degradados */
+        background-color: #e75480; /* Rosa */
+        background-image: linear-gradient(to bottom, #e75480, #8e44ad); /* Degradado de rosa a morado */
+        
+        /* Estilos adicionales para el cuerpo del documento */
+        margin: 0; /* Elimina el margen predeterminado del cuerpo */
+        padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+        height: 100vh; /* Establece la altura del cuerpo al 100% del viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+
 }
 .container {
     background-color: #fff;

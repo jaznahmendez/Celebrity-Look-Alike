@@ -33,6 +33,10 @@ app.get('/script.js', (req, res) => {
     res.sendFile(path.join(__dirname, 'script.js'));
 });
 
+app.get('/racoon-pedro.gif', (req, res) => {
+    res.sendFile(path.join(__dirname, 'racoon-pedro.gif'));
+});
+
 app.post('/upload', upload.single('file'), (req, res) => {
     const file = req.file;
     const params = {
@@ -83,10 +87,12 @@ const getLastUploadedObject = () => {
                         console.error('Error fetching image from S3:', err);
                     } else {
                         const image = data.Body.toString('base64');
-                        lastUploadedObject.image = image;
+                        lastUploadedObject.image_compared = image;
                         console.log('Image:', image);
                     }
                 });
+
+
                 const params2 = {
                     Bucket: 'celebrity-comparison-images',
                     Key: lastUploadedObject.MatchedFileName
@@ -96,17 +102,28 @@ const getLastUploadedObject = () => {
                         console.error('Error fetching image from S3:', err);
                     } else {
                         const image = data.Body.toString('base64');
-                        lastUploadedObject.image = image;
+                        lastUploadedObject.image_matched = image;
                         console.log('\n\n\n\n');
                         console.log('Image:', image);
                     }
                 });
+
+                compared_face = lastUploadedObject;
             }
         }
     });
 };
 
 setInterval(getLastUploadedObject, 5000);
+
+app.get('/results', (req, res) => {
+    //JSON object to store the results
+    const results = {
+        compared_face: compared_face
+    };
+    res.json(results);
+}
+);
 
 
 
