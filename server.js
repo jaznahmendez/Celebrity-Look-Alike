@@ -37,6 +37,10 @@ app.get('/racoon-pedro.gif', (req, res) => {
     res.sendFile(path.join(__dirname, 'racoon-pedro.gif'));
 });
 
+app.get('/star.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, 'star.ico'));
+});
+
 app.post('/upload', upload.single('file'), (req, res) => {
     const file = req.file;
     const params = {

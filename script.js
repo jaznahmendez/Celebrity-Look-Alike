@@ -55,19 +55,28 @@ function loading() {
                 response = JSON.parse(xhr.responseText);
                 
                 var comparedImageHTML = `
-                    <img src="data:image/jpeg;base64,${response.compared_face.image_compared}" alt="Image 1">
+                    <img id="compared" src="data:image/jpeg;base64,${response.compared_face.image_compared}" alt="Image 1">
                 `;
                 var imageHTML = `
-                     <img src="data:image/jpeg;base64,${response.compared_face.image_matched}" alt="Image 2">
+                     <img id="matched" src="data:image/jpeg;base64,${response.compared_face.image_matched}" alt="Image 2">
                 `;
                 var messageHTML = `
-                    <h1>Similarity:</h1><br><h2>${response.compared_face.Similarity.toFixed(2)}%</h2><br>
-                    <h2>${response.compared_face.MatchedFileName}</h2>
+                    <div class = col-4>
+                        <h1>Similarity:</h1>
+                    </div>
+                    <div class = col-8>
+                        <div class="row">
+                            <h2>${response.compared_face.Similarity.toFixed(2)}% </h2>
+                        </div>
+                        <div class="row">
+                            <h3> ${response.compared_face.MatchedFileName}</h3>\
+                        </div>
+                    </div>
                 `;
 
                 results.innerHTML = comparedImageHTML + imageHTML;
-                container.innerHTML += messageHTML;
+                container.innerHTML = messageHTML;
             }
         };
-    }, 8000); // Simulate a 5-second task
+    }, 6000); // Simulate a 5-second task
 }

@@ -137,9 +137,10 @@ img {
     position: relative;
 }
 .results img{
-    width: auto; /* Maintain original aspect ratio */
-    height: 100%; /* Fit the height of the container */
+    width: 300px; /* Maintain original aspect ratio */
+    height: 300px; /* Fit the height of the container */
     object-fit: cover;
     object-position: center; /* Center the image in the container */
-    position: absolute; /* Position the image absolutely inside the container */
+ /* Position the image absolutely inside the container */
 }
+
