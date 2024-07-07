@@ -60,16 +60,22 @@ function loading() {
                 var imageHTML = `
                      <img id="matched" src="data:image/jpeg;base64,${response.compared_face.image_matched}" alt="Image 2">
                 `;
+ 
+                let filename = response.compared_face.MatchedFileName;
+                let nameOnly = filename.split('.')[0].replace('-', ' ');
+                console.log(nameOnly); // Output: "robert downey"
+
+                
                 var messageHTML = `
-                    <div class = col-4>
-                        <h1>Similarity:</h1>
-                    </div>
                     <div class = col-8>
+                        <div class="row">
+                            <h1>Similarity:</h1>
+                        </div>
                         <div class="row">
                             <h2>${response.compared_face.Similarity.toFixed(2)}% </h2>
                         </div>
                         <div class="row">
-                            <h3> ${response.compared_face.MatchedFileName}</h3>\
+                            <h3> ${nameOnly}</h3>\
                         </div>
                     </div>
                 `;
@@ -78,5 +84,5 @@ function loading() {
                 container.innerHTML = messageHTML;
             }
         };
-    }, 6000); // Simulate a 5-second task
+    }, 8000); // Simulate a 5-second task
 }

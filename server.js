@@ -41,6 +41,14 @@ app.get('/star.ico', (req, res) => {
     res.sendFile(path.join(__dirname, 'star.ico'));
 });
 
+app.get('/star.png', (req, res) => {
+    res.sendFile(path.join(__dirname, 'star.png'));
+});
+
+app.get('/star2.png', (req, res) => {
+    res.sendFile(path.join(__dirname, 'star2.png'));
+});
+
 app.post('/upload', upload.single('file'), (req, res) => {
     const file = req.file;
     const params = {

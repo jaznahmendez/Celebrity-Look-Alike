@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
 </head>
 <body>
     <div class="curved-text">
@@ -21,15 +22,31 @@
             </text>
         </svg>
     </div>
-    <div class="col-md-6">
+    <div class="col" style="width: 600px;">
         <div class="overlay" id="loadingOverlay">
             <img src="./racoon-pedro.gif" alt="Loading...">
         </div>
-        <div class="container load" id="results-div"></div>      
+        <div class="container load" id="results-div" style="display: flex; justify-content: center;">
+            <div class = col-8>
+                <div class="row">
+                    <h1>How it works:</h1>
+                </div>
+                <div class="row">
+                    <h2>1. Take a Photo</h2>
+                </div>
+                <div class="row">
+                    <h2>2. Upload your photo</h2>
+                </div>
+                <div class="row">
+                    <h2>3. Get your results??</h2>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
+             
+        </div>
+        <div class="col">
         <div class="row">
-            <div class="results" id="img-res">
+            <div class="results" id="img-res" style="width: 600px;">
             </div>
         </div>
         <div class="row">
@@ -45,6 +62,10 @@
             </div>
         </div>
         </div>
+
+
+        
+          
     </div>
     <script src="script.js"></script>
 </body>

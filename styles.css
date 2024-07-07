@@ -123,6 +123,10 @@ img {
     "MORF" 15,
     "SHLN" 50;
     font-size: 50px;
+    position: relative;
+    top: 0;
+    left: 50;
+    
 }
 
 .load h2 {
@@ -144,3 +148,43 @@ img {
  /* Position the image absolutely inside the container */
 }
 
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .background-spin {
+    position: fixed;
+    top: 100;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .background-spin::before {
+    content: "";
+    position:fixed;
+    top: 100;
+    left: 0;
+    background: url('star.png')  center center;
+    animation: spin 3s linear infinite; /* Adjust the duration as needed */
+    
+  }
+  /*repeat the above code for the other star image*/
+    .background-spin::before {
+        content: "";
+        position:fixed;
+        top: 100;
+        left: 40;
+        width: 20vw;
+        height: 20vh;
+        background: url('star2.png') no-repeat center center;
+        background-size: cover;
+        animation: spin 1s linear infinite; /* Adjust the duration as needed */
+        z-index: -1; /* Ensure it stays in the background */
+    }
+  
