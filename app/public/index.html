@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Look-Alike</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/app/images/star.ico">
+    
+</head>
+<body>
+    <div class="curved-text">
+        <svg viewBox="0 0 580 150">
+            <path id="curve" d="M20,110 Q290,-10 550,110" fill="transparent"/>
+            <text width="500">
+                <textPath href="#curve">
+                    Your Celebrity Look-Alike
+                </textPath>
+            </text>
+        </svg>
+    </div>
+    <div class="col" style="width: 600px;">
+        <div class="overlay" id="loadingOverlay">
+            <img src="./racoon-pedro.gif" alt="Loading...">
+        </div>
+        <div class="container load" id="results-div" style="display: flex; justify-content: center;">
+            <div class = col-8>
+                <div class="row">
+                    <h1>How it works:</h1>
+                </div>
+                <div class="row">
+                    <h2>1. Take a Photo</h2>
+                </div>
+                <div class="row">
+                    <h2>2. Upload your photo</h2>
+                </div>
+                <div class="row">
+                    <h2>3. Get your results??</h2>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+        <div class="col">
+        <div class="row">
+            <div class="results" id="img-res" style="width: 600px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="container upload">
+                <h1>Upload a Photo</h1>
+                <form id="uploadForm">
+                    <div class="file-input">
+                        <input type="file" id="file" name="file">
+                        <label for="file">Choose Photo</label>
+                    </div>
+                    <button type="submit">Get Results!!</button>
+                </form>
+            </div>
+        </div>
+        </div>
+
+
+        
+          
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
