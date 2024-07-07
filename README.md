@@ -13,6 +13,12 @@ The project consists of a web application hosted on an EC2 instance, where users
 2. Upload a photo
 3. Get your results
 
+### Web Page
+### ![Celebrity Look-Alike](http://ec2-3-138-155-40.us-east-2.compute.amazonaws.com:3000/)
+
+![image](https://github.com/jaznahmendez/Celebrity-Look-Alike/assets/123341132/91116e41-b6d2-48e8-ad8a-d43a679ad8a1)
+
+
 ### Authors
 This project was done for the Cloud Computing course:
 - Luther Williams
